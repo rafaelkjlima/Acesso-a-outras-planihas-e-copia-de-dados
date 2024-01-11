@@ -1,9 +1,7 @@
 Sub Reposições()
 
     Dim wb1 As Workbook
-	'Origem
     Dim wb2 As Workbook
-	'Destino
     Dim planilha1 As Worksheet
     Dim planilha2 As Worksheet
     Dim ultimaLinha1 As Long, ultimaLinha2 As Long
@@ -16,7 +14,7 @@ Sub Reposições()
     Set wb2 = Workbooks.Open("Caminho\Para\Workbook2.xlsx") 
     		'referente a pasta de destino
 
-    ' Defina as planilhas onde os dados estão em cada pasta de trabalho
+    ' Defina as planilhas 
     Set planilha1 = wb1.Sheets("Planilha1")
 		 'Planilha de origem
     Set planilha2 = wb2.Sheets("Planilha2")
@@ -30,7 +28,7 @@ Sub Reposições()
     
     ' Loop através das células na coluna B da T2, P2 em Origem
     For i = 1 To ultimaLinha2
-        ' Verifique se o valor na célula é igual REPOSIÇÃO
+        ' Verifique se o valor na célula é igual 0
         If planilha2.Cells(i, "B").Value = 0 Then
 
             ' Verifica se os dados já existem na T1, P1 em Destino
@@ -55,7 +53,6 @@ Sub Reposições()
         End If
     Next i
     
-    ' Feche as pastas de trabalho sem salvar alterações
     wb1.Close SaveChanges:=False
     wb2 SaveChanges:=True
 End Sub
