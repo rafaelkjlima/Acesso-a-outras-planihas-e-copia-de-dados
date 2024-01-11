@@ -14,7 +14,7 @@ Sub Reposições()
     Set wb2 = Workbooks.Open("Caminho\Para\Workbook2.xlsx") 
     		'referente a pasta de destino
 
-    ' Defina as planilhas onde os dados estão em cada pasta de trabalho
+    ' Defina as planilhas 
     Set planilha1 = wb1.Sheets("Planilha1")
 		 'Planilha de origem
     Set planilha2 = wb2.Sheets("Planilha2")
